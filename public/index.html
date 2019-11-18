@@ -4,19 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Vue + Tailwind</title>
     <link rel="stylesheet" href="/build/tailwind.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
 </head>
 <body class="bg-gray-900">
-    <div id="header" class="flex bg-gray-800 h-16">
-        <a class="w-16 p-3 flex flex-row" href="#">
-            <div class="bg-gray-700 p-3">
-                <p class="font-sans text-xl text-blue-300 text-left">
-                    PIAPRO
-                </p>
-            </div>
-            <img class="ml-1" src="/img/aimaina.png" alt="aimaina">
-        </a>
+    <div id="app">
+        <div id="header" class="flex bg-gray-800 h-16">
+            <a class="w-16 p-3 flex flex-row" href="#">
+                <div class="bg-gray-700 p-3">
+                    <p class="font-sans text-xl text-blue-300 text-left">
+                        {{titulo}}
+                    </p>
+                </div>
+                <img class="ml-1" src="/img/aimaina.png" alt="aimaina">
+            </a>
+        </div>
+
+
+        <input v-model="nuevaFruta.nombre" type="text" name="nombre" placeholder="Nombre">
+        <input v-model="nuevaFruta.cantidad" type="number" name="cantidad" placeholder="Cantidad">
+        <button @click="agregarFruta" class="text-green-500">Agregar</button>
+
+        <ul>
+            <li v-for="fruta of frutas" class="text-red-700">
+                    {{fruta.cantidad}} - {{fruta.nombre}}
+                    <span v-if="fruta.cantidad === 0">Sin Stock</span>
+            </li>
+        </ul>
     </div>
+    <script src="01.js"></script>
 </body>
 </html>
