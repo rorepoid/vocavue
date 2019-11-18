@@ -5,35 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Vue + Tailwind</title>
+    <link href="/img/favicon.png" type="image/x-icon" rel="icon" />
     <link rel="stylesheet" href="/build/tailwind.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     
 </head>
 <body class="bg-gray-900">
-    <div id="app">
-        <div id="header" class="flex bg-gray-800 h-16">
-            <a class="w-16 p-3 flex flex-row" href="#">
+    <div id="header" class="flex bg-gray-800 h-16">
+        <a class="w-16 p-3 flex flex-row" href="#">
                 <div class="bg-gray-700 p-3">
                     <p class="font-sans text-xl text-blue-300 text-left">
-                        {{titulo}}
+                            VocaDB
                     </p>
                 </div>
                 <img class="ml-1" src="/img/aimaina.png" alt="aimaina">
             </a>
         </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- Vue JS -->
+        <div id="app" class="m-4 mx-64">
+            <input v-model="nuevaFruta.nombre" @keyup.enter="agregarFruta" type="text" name="nombre" placeholder="Nombre" class="mb-10">
+            <input v-model="nuevaFruta.cantidad" @keyup.enter="agregarFruta" type="number" name="cantidad" placeholder="Cantidad" class="mb-10 w-10 ml-2 text-center">
+            <button @click="agregarFruta" class="text-green-500">Agregar</button>
 
-
-        <input v-model="nuevaFruta.nombre" type="text" name="nombre" placeholder="Nombre">
-        <input v-model="nuevaFruta.cantidad" type="number" name="cantidad" placeholder="Cantidad">
-        <button @click="agregarFruta" class="text-green-500">Agregar</button>
-
-        <ul>
-            <li v-for="fruta of frutas" class="text-red-700">
-                    {{fruta.cantidad}} - {{fruta.nombre}}
-                    <span v-if="fruta.cantidad === 0">Sin Stock</span>
-            </li>
-        </ul>
-    </div>
+            <div class="flex flex-row">
+                <div class="mr-20">
+                    <ul>
+                        <li v-for="fruta of frutas" class="text-blue-700 font-mono">
+                            <input v-model="fruta.cantidad" type="number" name="cantidad" class="h-4 w-10 text-right m-1">
+                                - 
+                            <input v-model="fruta.nombre" type="text" name="nombre" class="h-4 w-24 text-center m-1">
+                            <span v-if="fruta.cantidad === 0" class="text-red-700">Sin Stock</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-yellow-700">
+                    Total
+                    <span>{{total}} frutas</span>
+                </div>
+            </div>
+        </div>
+    <!-- End Vue JS -->
+    
+    
+    
+    
+    
+    
     <script src="01.js"></script>
 </body>
 </html>
