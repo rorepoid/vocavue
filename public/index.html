@@ -32,16 +32,18 @@
         <!-- Vue JS -->
         <div id="app" class="m-4 mx-64">
             <input v-model="nuevaFruta.nombre" @keyup.enter="agregarFruta" type="text" name="nombre" placeholder="Nombre" class="mb-10">
-            <input v-model="nuevaFruta.cantidad" @keyup.enter="agregarFruta" type="number" name="cantidad" placeholder="Cantidad" class="mb-10 w-10 ml-2 text-center">
+            <input v-model.number="nuevaFruta.cantidad" @keyup.enter="agregarFruta" type="number" name="cantidad" placeholder="Cantidad" class="mb-10 w-10 ml-2 text-center">
             <button @click="agregarFruta" class="text-green-500">Agregar</button>
 
             <div class="flex flex-row">
                 <div class="mr-20">
                     <ul>
                         <li v-for="fruta of frutas" class="text-blue-700 font-mono">
-                            <input v-model="fruta.cantidad" type="number" name="cantidad" class="h-4 w-10 text-right m-1">
-                                - 
                             <input v-model="fruta.nombre" type="text" name="nombre" class="h-4 w-24 text-center m-1">
+                            => 
+                            <input v-model.number="fruta.cantidad" type="number" name="cantidad" min="0" class="h-4 w-10 text-right m-1">
+                            <button @click="fruta.cantidad++">+</button>
+                            <button @click="fruta.cantidad--">-</button>
                             <span v-if="fruta.cantidad === 0" class="text-red-700">Sin Stock</span>
                         </li>
                     </ul>

@@ -8,14 +8,17 @@ const app = new Vue({
             {nombre: 'Plátano', cantidad: 11},
         ],
         nuevaFruta: {nombre: null, cantidad: 0},
-        total: 0,
     },
     methods: {
         agregarFruta() {
-            this.frutas.push({nombre: this.nuevaFruta.nombre, cantidad: parseInt(this.nuevaFruta.cantidad)});
+            this.frutas.push({nombre: this.nuevaFruta.nombre, cantidad: this.nuevaFruta.cantidad});
             this.nuevaFruta = {nombre: null, cantidad: 0};
-            this.total = this.frutas.reduce((contador, array) => contador + array.cantidad, 0);
         },
+    },
+    computed: {
+        total() {
+            return this.frutas.reduce((contador, array) => contador + array.cantidad, 0)
+        }
     }
 
 })
