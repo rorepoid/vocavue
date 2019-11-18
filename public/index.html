@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     
 </head>
-<body class="bg-gray-900">
+<body>
     <div id="header" class="flex bg-gray-800 h-16">
         <a class="w-16 p-3 flex flex-row" href="#">
                 <div class="bg-gray-700 p-3">
@@ -30,28 +30,34 @@
         
         
         <!-- Vue JS -->
-        <div id="app" class="m-4 mx-64">
-            <input v-model="nuevaFruta.nombre" @keyup.enter="agregarFruta" type="text" name="nombre" placeholder="Nombre" class="mb-10">
-            <input v-model.number="nuevaFruta.cantidad" @keyup.enter="agregarFruta" type="number" name="cantidad" placeholder="Cantidad" class="mb-10 w-10 ml-2 text-center">
-            <button @click="agregarFruta" class="text-green-500">Agregar</button>
+        <div id="app" :class="[{'bg-gray-900': darkTheme}, 'absolute', 'h-full', 'w-full']">
+            <button @click="darkTheme = !darkTheme" :class="['absolute', 'right-0', 'text-green-900']">Dark Theme</button>
+            <div class="m-4 mx-64">
+                <input v-model="nuevaFruta.nombre" @keyup.enter="agregarFruta" type="text" name="nombre" placeholder="Nombre" class="mb-10">
+                <input v-model.number="nuevaFruta.cantidad" @keyup.enter="agregarFruta" type="text" name="cantidad" placeholder="Cantidad" class="mb-10 w-10 ml-2 text-center">
+                <button @click="nuevaFruta.cantidad++" class="text-blue-700">+</button>
+                <button @click="nuevaFruta.cantidad--" class="text-blue-700">-</button>
+                <button @click="agregarFruta" class="text-green-500 ml-8 border-yellow-900">Agregar</button>
 
-            <div class="flex flex-row">
-                <div class="mr-20">
-                    <ul>
-                        <li v-for="fruta of frutas" class="text-blue-700 font-mono">
-                            <input v-model="fruta.nombre" type="text" name="nombre" class="h-4 w-24 text-center m-1">
-                            => 
-                            <input v-model.number="fruta.cantidad" type="number" name="cantidad" min="0" class="h-4 w-10 text-right m-1">
-                            <button @click="fruta.cantidad++">+</button>
-                            <button @click="fruta.cantidad--">-</button>
-                            <span v-if="fruta.cantidad === 0" class="text-red-700">Sin Stock</span>
-                        </li>
-                    </ul>
+                <div class="flex flex-row">
+                    <div class="mr-20">
+                        <ul>
+                            <li v-for="fruta of frutas" class="text-blue-700 font-mono">
+                                <input v-model="fruta.nombre" type="text" name="nombre" class="h-4 w-24 text-center m-1">
+                                => 
+                                <input v-model.number="fruta.cantidad" type="text" name="cantidad" min="0" class="h-4 w-10 text-center m-1">
+                                <button @click="fruta.cantidad++">+</button>
+                                <button @click="fruta.cantidad--">-</button>
+                                <span v-if="fruta.cantidad === 0" class="text-red-700">Sin Stock</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="text-yellow-700">
+                        Total
+                        <span>{{sumarFrutas}} frutas</span><br>
+                    </div>
                 </div>
-                <div class="text-yellow-700">
-                    Total
-                    <span>{{total}} frutas</span>
-                </div>
+                <h1 :class="['text-white', 'm-8']">asasasas</h1>
             </div>
         </div>
     <!-- End Vue JS -->
