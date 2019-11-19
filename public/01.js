@@ -16,6 +16,9 @@ const app = new Vue({
             this.frutas.push({nombre: this.nuevaFruta.nombre, cantidad: this.nuevaFruta.cantidad});
             this.nuevaFruta = {nombre: null, cantidad: 0};
         },
+        removerFruta(index) {
+            this.frutas.splice(index, 1);
+        }
     },
     computed: {
         sumarFrutas() {

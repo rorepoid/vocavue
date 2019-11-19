@@ -41,13 +41,15 @@
                 <div class="flex flex-row">
                     <div class="mr-20">
                         <ul>
-                            <li v-for="fruta of frutas" class="text-blue-700 font-mono">
+                            <li v-for="(fruta, index) of frutas" class="text-blue-700 font-mono">
+                                <span>{{index}}</span>
                                 <input v-model="fruta.nombre" type="text" name="nombre" class="h-4 w-24 text-center m-1">
                                 => 
                                 <input v-model.number="fruta.cantidad" type="text" name="cantidad" min="0" class="h-4 w-10 text-center m-1">
                                 <button @click="fruta.cantidad++">+</button>
                                 <button @click="fruta.cantidad--">-</button>
                                 <span v-if="fruta.cantidad === 0" class="text-red-700">Sin Stock</span>
+                                <button @click="frutas.splice(index, 1)">Eliminar</button>
                             </li>
                         </ul>
                     </div>
