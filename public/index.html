@@ -10,26 +10,123 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     
 </head>
-<body>
-    <div id="header" class="flex bg-gray-800 h-16">
-        <a class="w-16 p-3 flex flex-row" href="#">
-                <div class="bg-gray-700 p-3">
-                    <p class="font-sans text-xl text-blue-300 text-left">
-                            VocaDB
-                    </p>
+<body class="overflow-hidden">
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- Vue JS -->
+    <div id="app" :class="[{'bg-gray-900': darkTheme}, 'h-full', 'w-full']">
+        
+        
+        
+        
+        <div class="flex flex-row">
+            <div class="w-1/4 border border-blue-900 text-white bg-gray-700 rounded m-1">
+                <button class="w-full h-12">Inicio</button>
+                <button class="w-full h-12">Novedades</button>
+                <button class="w-full h-12">Favoritos</button>
+                <button class="w-full h-12">Artistas</button>
+            </div>
+
+            <!-- <div class="absolute top-0 bottom-auto sticky">
+                    <div id="header" class="flex bg-gray-800 h-16">
+                        <a class="w-16 p-3 flex flex-row" href="#">
+                            <div class="bg-gray-700 p-3">
+                                <p class="font-sans text-xl text-blue-300 text-left">
+                                    VocaDB
+                            </p>
+                        </div>
+                        <img class="ml-1" src="/img/aimaina.png" alt="aimaina">
+                        </a>
+                        <button @click="darkTheme = !darkTheme" :class="['absolute', 'right-0', 'text-green-900']">Dark Theme</button>
+                    </div>
+                </div> -->
+                
+            <div class="w-3/4 bg-gray-700 border-blue-900 rounded-lg m-1 top-auto h-screen">
+                
+                <div class="overflow-scroll">
+                    <div class="h-screen" >
+                        <div class="h-64 bg-black m-2 rounded-lg text-white text-center">
+                            Eventos
+                        </div>
+                        <div class="flex flex-column">
+                            <div class="w-1/2 bg-black m-2 h-56 rounded-lg text-white text-center">
+                                <div class="bg-blue-700 rounded-lg border-yellow-900 h-40">
+                                    Image
+                                </div>
+                                SpicA
+                            </div>
+                            <div class="w-1/2 bg-black m-2 h-56 rounded-lg text-white text-center">
+                                <div class="bg-blue-700 rounded-lg border-yellow-900 h-40">
+                                    Image
+                                </div>
+                                ODDS & ENDS
+                            </div>
+                        </div>
+                        <div class="flex flex-column">
+                            <div class="w-1/2 bg-black m-2 h-56 rounded-lg text-white text-center">
+                                <div class="bg-blue-700 rounded-lg border-yellow-900 h-40">
+                                    Image
+                                </div>
+                                Dream Fever
+                            </div>
+                            <div class="w-1/2 bg-black m-2 h-56 rounded-lg text-white text-center">
+                                <div class="bg-blue-700 rounded-lg border-yellow-900 h-40">
+                                    Image
+                                </div>
+                                Secret Police
+                            </div>
+                        </div>
+                        <div class="flex flex-column">
+                            <div class="w-1/2 bg-black m-2 h-56 rounded-lg text-white text-center">
+                                <div class="bg-blue-700 rounded-lg border-yellow-900 h-40">
+                                    Image
+                                </div>
+                                Dream Fever
+                            </div>
+                            <div class="w-1/2 bg-black m-2 h-56 rounded-lg text-white text-center">
+                                <div class="bg-blue-700 rounded-lg border-yellow-900 h-40">
+                                    Image
+                                </div>
+                                Secret Police
+                            </div>
+                        </div>
+                        <div class="flex flex-column">
+                            <div class="w-1/2 bg-black m-2 h-56 rounded-lg text-white text-center">
+                                <div class="bg-blue-700 rounded-lg border-yellow-900 h-40">
+                                    Image
+                                </div>
+                                Dream Fever
+                            </div>
+                            <div class="w-1/2 bg-black m-2 h-56 rounded-lg text-white text-center">
+                                <div class="bg-blue-700 rounded-lg border-yellow-900 h-40">
+                                    Image
+                                </div>
+                                Secret Police
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <img class="ml-1" src="/img/aimaina.png" alt="aimaina">
-            </a>
+            </div>
         </div>
         
-        
-        
-        
-        
-        
-        
-        <!-- Vue JS -->
-        <div id="app" :class="[{'bg-gray-900': darkTheme}, 'absolute', 'h-full', 'w-full']">
+
+
+
+
+
+
+            <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
             <button @click="darkTheme = !darkTheme" :class="['absolute', 'right-0', 'text-green-900']">Dark Theme</button>
             <div class="m-4 mx-64">
                 <input v-model="nuevaFruta.nombre" @keyup.enter="agregarFruta" type="text" name="nombre" placeholder="Nombre" class="mb-10">
@@ -58,7 +155,7 @@
                         <span>{{sumarFrutas}} frutas</span><br>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     <!-- End Vue JS -->
     
