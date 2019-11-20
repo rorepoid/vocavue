@@ -28,3 +28,33 @@ const app = new Vue({
     }
 
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function getData(){
+var url = 'https://vocadb.net/api/songs/top-rated?maxResults=5';
+let response = await fetch(url);
+
+if (response.ok) { // if HTTP-status is 200-299
+  // get the response body (the method explained below)
+  let json = await response.json();
+  console.log(json);
+//   alert(response.status);
+} else {
+  alert("HTTP-Error: " + response.status);
+}
+}
+
+getData();
+
+// console.log('asas');

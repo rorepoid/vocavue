@@ -11,110 +11,97 @@
     
 </head>
 <body class="overflow-hidden">
-
-
-
-    
-    
-    
-    
-    
-    
-    
     
     <!-- Vue JS -->
-    <div id="app" :class="[{'bg-gray-900': darkTheme}, 'h-full', 'w-full']">
-        
-        
-        
-        
+    <div id="app" :class="[{'bg-gray-800': darkTheme}, 'h-full', 'w-full']">
         <div class="flex flex-row w-full h-screen" >
-            <div class="w-1/4 border border-blue-900 text-white bg-gray-700 rounded">
+            <div class="w-1/4 text-white bg-gray-700 rounded mx-1">
+                <div class="sticky top-0 bottom-auto w-full pb-1">
+                    <div id="header" class="flex bg-gray-800 h-16 rounded-lg rounded-t-none">
+                        <a class="w-16  flex flex-row" href="#">
+                            <img class="relative rounded" src="/img/aimaina.png" alt="aimaina">
+                            <div class="rounded-lg">
+                                <p class="font-sans text-xl text-blue-300 text-left w-32">
+                                    VocaDB Client
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
                 <button class="w-full h-12">Inicio</button>
                 <button class="w-full h-12">Novedades</button>
                 <button class="w-full h-12">Favoritos</button>
+                <button class="w-full h-12">Suscripciones</button>
                 <button class="w-full h-12">Artistas</button>
             </div>
 
-            <div class="flex flex-col w-full p-1 overflow-y-scroll">
-
-
-                <div class="sticky top-0 bottom-auto w-full">
-                    <div id="header" class="flex bg-gray-800 h-16 rounded-lg">
-                        <a class="w-16  flex flex-row" href="#">
-                            <div class="bg-gray-700 rounded-lg">
-                                <p class="font-sans text-xl text-blue-300 text-left">
-                                    VocaDB
-                            </p>
-                        </div>
-                        <img class="ml-1" src="/img/aimaina.png" alt="aimaina">
-                        </a>
-                        <button @click="darkTheme = !darkTheme" :class="['absolute', 'right-0', 'text-green-900']">Dark Theme</button>
+            <div class="flex flex-col w-full px-1 pb-1 overflow-y-scroll">
+                <div class="sticky top-0 w-full flex flex-col">
+                    <div id="searcher" class="flex bg-gray-800 h-16 rounded-lg rounded-t-none p-4">
+                        <input type="text" name="search" id="search" placeholder="Search" class="w-3/4 rounded-full">
                     </div>
+                    <button @click="darkTheme = !darkTheme" :class="['absolute', 'right-0', 'text-white']">Dark Theme</button>
                 </div>
-                    
-
                 <div class="w-auto bg-gray-700 border-blue-900 rounded-lg  top-auto w-full">
-                    
-                            <div class="h-64 bg-black m-3 rounded-lg text-white text-center">
-                                Eventos
+                    <div class="h-64 bg-black m-3 rounded-lg text-white text-center">
+                        Eventos
+                    </div>
+                    <div class="flex flex-column">
+                        <div class="w-1/2 bg-black m-3 h-56 rounded-lg text-white text-center">
+                            <div class="bg-gray-600 rounded-lg border-yellow-900 h-40">
+                                Image
                             </div>
-                            <div class="flex flex-column">
-                                <div class="w-1/2 bg-black m-3 h-56 rounded-lg text-white text-center">
-                                    <div class="bg-blue-700 rounded-lg border-yellow-900 h-40">
-                                        Image
-                                    </div>
-                                    SpicA
-                                </div>
-                                <div class="w-1/2 bg-black m-3 h-56 rounded-lg text-white text-center">
-                                    <div class="bg-blue-700 rounded-lg border-yellow-900 h-40">
-                                        Image
-                                    </div>
-                                    ODDS & ENDS
-                                </div>
+                            SpicA
+                        </div>
+                        <div class="w-1/2 bg-black m-3 h-56 rounded-lg text-white text-center">
+                            <div class="bg-gray-600 rounded-lg border-yellow-900 h-40">
+                                Image
                             </div>
-                            <div class="flex flex-column">
-                                <div class="w-1/2 bg-black m-3 h-56 rounded-lg text-white text-center">
-                                    <div class="bg-blue-700 rounded-lg border-yellow-900 h-40">
-                                        Image
-                                    </div>
-                                    Dream Fever
-                                </div>
-                                <div class="w-1/2 bg-black m-3 h-56 rounded-lg text-white text-center">
-                                    <div class="bg-blue-700 rounded-lg border-yellow-900 h-40">
-                                        Image
-                                    </div>
-                                    Secret Police
-                                </div>
+                            ODDS & ENDS
+                        </div>
+                    </div>
+                    <div class="flex flex-column">
+                        <div class="w-1/2 bg-black m-3 h-56 rounded-lg text-white text-center">
+                            <div class="bg-gray-600 rounded-lg border-yellow-900 h-40">
+                                Image
                             </div>
-                            <div class="flex flex-column">
-                                <div class="w-1/2 bg-black m-3 h-56 rounded-lg text-white text-center">
-                                    <div class="bg-blue-700 rounded-lg border-yellow-900 h-40">
-                                        Image
-                                    </div>
-                                    Dream Fever
-                                </div>
-                                <div class="w-1/2 bg-black m-3 h-56 rounded-lg text-white text-center">
-                                    <div class="bg-blue-700 rounded-lg border-yellow-900 h-40">
-                                        Image
-                                    </div>
-                                    Secret Police
-                                </div>
+                            Dream Fever
+                        </div>
+                        <div class="w-1/2 bg-black m-3 h-56 rounded-lg text-white text-center">
+                            <div class="bg-gray-600 rounded-lg border-yellow-900 h-40">
+                                Image
                             </div>
-                            <div class="flex flex-column">
-                                <div class="w-1/2 bg-black m-3 h-56 rounded-lg text-white text-center">
-                                    <div class="bg-blue-700 rounded-lg border-yellow-900 h-40">
-                                        Image
-                                    </div>
-                                    Dream Fever
-                                </div>
-                                <div class="w-1/2 bg-black m-3 h-56 rounded-lg text-white text-center">
-                                    <div class="bg-blue-700 rounded-lg border-yellow-900 h-40">
-                                        Image
-                                    </div>
-                                    Secret Police
-                                </div>
+                            Secret Police
+                        </div>
+                    </div>
+                    <div class="flex flex-column">
+                        <div class="w-1/2 bg-black m-3 h-56 rounded-lg text-white text-center">
+                            <div class="bg-gray-600 rounded-lg border-yellow-900 h-40">
+                                Image
                             </div>
+                            Dream Fever
+                        </div>
+                        <div class="w-1/2 bg-black m-3 h-56 rounded-lg text-white text-center">
+                            <div class="bg-gray-600 rounded-lg border-yellow-900 h-40">
+                                Image
+                            </div>
+                            Secret Police
+                        </div>
+                    </div>
+                    <div class="flex flex-column">
+                        <div class="w-1/2 bg-black m-3 h-56 rounded-lg text-white text-center">
+                            <div class="bg-gray-600 rounded-lg border-yellow-900 h-40">
+                                Image
+                            </div>
+                            Dream Fever
+                        </div>
+                        <div class="w-1/2 bg-black m-3 h-56 rounded-lg text-white text-center">
+                            <div class="bg-gray-600 rounded-lg border-yellow-900 h-40">
+                                Image
+                            </div>
+                            Secret Police
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
