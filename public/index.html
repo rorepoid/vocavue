@@ -5,144 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Vue + Tailwind</title>
-    <link href="/img/favicon.png" type="image/x-icon" rel="icon" />
+    <link href="/img/favicon.png" type="image/x-icon" rel="icon"/>
     <link rel="stylesheet" href="/build/tailwind.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    
+
 </head>
 <body class="overflow-hidden">
-    
-    <!-- Vue JS -->
-    <div id="app" :class="[{'bg-gray-800': darkTheme}, 'h-full', 'w-full']">
-        <div class="flex flex-row w-full h-screen" >
-            <div class="w-1/4 text-white bg-gray-700 rounded mx-1">
-                <div class="sticky top-0 bottom-auto w-full pb-1">
-                    <div id="header" class="flex bg-gray-800 h-16 rounded-lg rounded-t-none">
-                        <a class="w-16  flex flex-row" href="#">
-                            <img class="relative rounded" src="/img/aimaina.png" alt="aimaina">
-                            <div class="rounded-lg">
-                                <p class="font-sans text-xl text-blue-300 text-left w-32">
-                                    VocaDB Client
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <button class="w-full h-12">Inicio</button>
-                <button class="w-full h-12">Novedades</button>
-                <button class="w-full h-12">Favoritos</button>
-                <button class="w-full h-12">Suscripciones</button>
-                <button class="w-full h-12">Artistas</button>
-            </div>
 
-            <div class="flex flex-wrap w-full px-1 pb-1 overflow-y-scroll">
-                <div class="sticky top-0 w-full flex flex-col">
-                    <div id="searcher" class="flex bg-gray-800 h-16 rounded-lg rounded-t-none p-4">
-                        <input type="text" name="search" id="search" placeholder="Search" class="w-3/4 rounded-full">
-                    </div>
-                    <button @click="darkTheme = !darkTheme" :class="['absolute', 'right-0', 'text-white']">Dark Theme</button>
+<!-- Vue JS -->
+<div id="app" :class="[{'bg-gray-800': darkTheme}, 'h-full', 'w-full']">
+    <div class="flex flex-row w-full h-screen">
+        <div class="w-1/4 text-white bg-gray-700 rounded mx-1">
+            <div class="sticky top-0 bottom-auto w-full pb-1">
+                <div id="header" class="flex bg-gray-800 h-16 rounded-lg rounded-t-none">
+                    <a class="w-16  flex flex-row" href="#">
+                        <img class="relative rounded" src="/img/aimaina.png" alt="aimaina">
+                        <div class="rounded-lg">
+                            <p class="font-sans text-xl text-blue-300 text-left w-32">
+                                VocaDB Client
+                            </p>
+                        </div>
+                    </a>
                 </div>
-                <div class="w-auto bg-gray-700 border-blue-900 rounded-lg  top-auto w-full">
-                    <div class="h-64 bg-black m-3 rounded-lg text-white text-center">
-                        Eventos
+            </div>
+            <button class="w-full h-12">Inicio</button>
+            <button class="w-full h-12">Novedades</button>
+            <button class="w-full h-12">Favoritos</button>
+            <button class="w-full h-12">Suscripciones</button>
+            <button class="w-full h-12">Artistas</button>
+        </div>
+
+        <div class="flex flex-wrap w-full px-1 pb-1 overflow-y-scroll">
+            <div class="sticky top-0 w-full flex flex-col">
+                <div id="searcher" class="flex bg-gray-800 h-16 rounded-lg rounded-t-none p-4">
+                    <input type="text" name="search" id="search" placeholder="Search" class="w-3/4 rounded-full">
+                </div>
+                <button @click="darkTheme = !darkTheme" :class="['absolute', 'right-0', 'text-white']">Dark Theme
+                </button>
+            </div>
+            <div class="w-auto bg-gray-700 border-blue-900 rounded-lg  top-auto w-full">
+                <div class="h-64 bg-black m-3 rounded-lg text-white text-center">
+                    Eventos
+                </div>
+                <div class="flex flex-wrap items-stretch container mx-auto">
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg text-white text-center">
+                        <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
+                            <img class="rounded-lg w-full h-full"
+                                 src="https://nicovideo.cdn.nimg.jp/thumbnails/36060272/36060272.17133200.L" alt=""
+                                 data-reactid="37">
+                        </div>
+                        SpicA
                     </div>
-                    <div class="flex flex-wrap items-stretch container mx-auto">
-                        <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black p-3 h-64 rounded-lg text-white text-center">
-                            <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
-                                <img class="rounded-lg w-full h-full" src="https://nicovideo.cdn.nimg.jp/thumbnails/36060272/36060272.17133200.L" alt="" data-reactid="37">
-                            </div>
-                            SpicA
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg text-white text-center">
+                        <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
+                            <img class="rounded-lg w-full h-full"
+                                 src="https://i0.hdslb.com/bfs/archive/fd0c6f308855646afe2ed10d9b7196162c8d908c.jpg" alt=""
+                                 data-reactid="37">
                         </div>
-                        <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black p-3 h-64 rounded-lg text-white text-center">
-                            <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
-                                <img class="rounded-lg w-full h-full" src="https://nicovideo.cdn.nimg.jp/thumbnails/36060272/36060272.17133200.L" alt="" data-reactid="37">
-                            </div>
-                            ODDS & ENDS
+                        ODDS & ENDS
+                    </div>
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg text-white text-center">
+                        <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
+                            <img class="rounded-lg w-full h-full"
+                                 src="https://i2.hdslb.com/bfs/archive/8f939a5008e8e37ab8ee1d2d01d8002bf3d3812a.jpg" alt=""
+                                 data-reactid="37">
                         </div>
-                        <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black p-3 h-64 rounded-lg text-white text-center">
-                            <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
-                                <img class="rounded-lg w-full h-full" src="https://nicovideo.cdn.nimg.jp/thumbnails/36060272/36060272.17133200.L" alt="" data-reactid="37">
-                            </div>
-                            Dream Fever
+                        Dream Fever
+                    </div>
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg text-white text-center">
+                        <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
+                            <img class="rounded-lg w-full h-full"
+                                 src="https://i1.hdslb.com/bfs/archive/dfda70903d963cabc370bc1610af66791dc7501b.jpg" alt=""
+                                 data-reactid="37">
                         </div>
-                        <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black p-3 h-64 rounded-lg text-white text-center">
-                            <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
-                                <img class="rounded-lg w-full h-full" src="https://nicovideo.cdn.nimg.jp/thumbnails/36060272/36060272.17133200.L" alt="" data-reactid="37">
-                            </div>
-                            Secret Police
+                        Secret Police
+                    </div>
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg text-white text-center">
+                        <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
+                            <img class="rounded-lg w-full h-full"
+                                 src="https://i0.hdslb.com/bfs/archive/ed69916ada4bbb190e29cbb1086f5c42bc47b3f4.jpg" alt=""
+                                 data-reactid="37">
                         </div>
-                        <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black p-3 h-64 rounded-lg text-white text-center">
-                            <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
-                                <img class="rounded-lg w-full h-full" src="https://nicovideo.cdn.nimg.jp/thumbnails/36060272/36060272.17133200.L" alt="" data-reactid="37">
-                            </div>
-                            Dream Fever
+                        Dream Fever
+                    </div>
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg text-white text-center">
+                        <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
+                            <img class="rounded-lg w-full h-full"
+                                 src="https://i2.hdslb.com/bfs/archive/1b7f32d8c7ec961cca63e476241bf7c1cd004cd1.jpg" alt=""
+                                 data-reactid="37">
                         </div>
-                        <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black p-3 h-64 rounded-lg text-white text-center">
-                            <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
-                                <img class="rounded-lg w-full h-full" src="https://nicovideo.cdn.nimg.jp/thumbnails/36060272/36060272.17133200.L" alt="" data-reactid="37">
-                            </div>
-                            Secret Police
+                        Secret Police
+                    </div>
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg text-white text-center">
+                        <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
+                            <img class="rounded-lg w-full h-full"
+                                 src="https://nicovideo.cdn.nimg.jp/thumbnails/36060272/36060272.17133200.L" alt=""
+                                 data-reactid="37">
                         </div>
-                        <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black p-3 h-64 rounded-lg text-white text-center">
-                            <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
-                                <img class="rounded-lg w-full h-full" src="https://nicovideo.cdn.nimg.jp/thumbnails/36060272/36060272.17133200.L" alt="" data-reactid="37">
-                            </div>
-                            Dream Fever
+                        Dream Fever
+                    </div>
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg text-white text-center">
+                        <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
+                            <img class="rounded-lg w-full h-full"
+                                 src="https://nicovideo.cdn.nimg.jp/thumbnails/36060272/36060272.17133200.L" alt=""
+                                 data-reactid="37">
                         </div>
-                        <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black p-3 h-64 rounded-lg text-white text-center">
-                            <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
-                                <img class="rounded-lg w-full h-full" src="https://nicovideo.cdn.nimg.jp/thumbnails/36060272/36060272.17133200.L" alt="" data-reactid="37">
-                            </div>
-                            Secret Police
-                        </div>
+                        Secret Police
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
+    <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
+    <button @click="darkTheme = !darkTheme" :class="['absolute', 'right-0', 'text-green-900']">Dark Theme</button>
+    <div class="m-4 mx-64">
+        <input v-model="nuevaFruta.nombre" @keyup.enter="agregarFruta" type="text" name="nombre" placeholder="Nombre" class="mb-10">
+        <input v-model.number="nuevaFruta.cantidad" @keyup.enter="agregarFruta" type="text" name="cantidad" placeholder="Cantidad" class="mb-10 w-10 ml-2 text-center">
+        <button @click="nuevaFruta.cantidad++" class="text-blue-700">+</button>
+        <button @click="nuevaFruta.cantidad--" class="text-blue-700">-</button>
+        <button @click="agregarFruta" class="text-green-500 ml-8 border-yellow-900">Agregar</button>
 
-
-            <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-            <button @click="darkTheme = !darkTheme" :class="['absolute', 'right-0', 'text-green-900']">Dark Theme</button>
-            <div class="m-4 mx-64">
-                <input v-model="nuevaFruta.nombre" @keyup.enter="agregarFruta" type="text" name="nombre" placeholder="Nombre" class="mb-10">
-                <input v-model.number="nuevaFruta.cantidad" @keyup.enter="agregarFruta" type="text" name="cantidad" placeholder="Cantidad" class="mb-10 w-10 ml-2 text-center">
-                <button @click="nuevaFruta.cantidad++" class="text-blue-700">+</button>
-                <button @click="nuevaFruta.cantidad--" class="text-blue-700">-</button>
-                <button @click="agregarFruta" class="text-green-500 ml-8 border-yellow-900">Agregar</button>
-
-                <div class="flex flex-row">
-                    <div class="mr-20">
-                        <ul>
-                            <li v-for="(fruta, index) of frutas" class="text-blue-700 font-mono">
-                                <span>{{index}}</span>
-                                <input v-model="fruta.nombre" type="text" name="nombre" class="h-4 w-24 text-center m-1">
-                                => 
-                                <input v-model.number="fruta.cantidad" type="text" name="cantidad" min="0" class="h-4 w-10 text-center m-1">
-                                <button @click="fruta.cantidad++">+</button>
-                                <button @click="fruta.cantidad--">-</button>
-                                <span v-if="fruta.cantidad === 0" class="text-red-700">Sin Stock</span>
-                                <button @click="frutas.splice(index, 1)">Eliminar</button>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="text-yellow-700">
-                        Total
-                        <span>{{sumarFrutas}} frutas</span><br>
-                    </div>
-                </div>
-            </div> -->
+        <div class="flex flex-row">
+            <div class="mr-20">
+                <ul>
+                    <li v-for="(fruta, index) of frutas" class="text-blue-700 font-mono">
+                        <span>{{index}}</span>
+                        <input v-model="fruta.nombre" type="text" name="nombre" class="h-4 w-24 text-center m-1">
+                        =>
+                        <input v-model.number="fruta.cantidad" type="text" name="cantidad" min="0" class="h-4 w-10 text-center m-1">
+                        <button @click="fruta.cantidad++">+</button>
+                        <button @click="fruta.cantidad--">-</button>
+                        <span v-if="fruta.cantidad === 0" class="text-red-700">Sin Stock</span>
+                        <button @click="frutas.splice(index, 1)">Eliminar</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="text-yellow-700">
+                Total
+                <span>{{sumarFrutas}} frutas</span><br>
+            </div>
         </div>
-    <!-- End Vue JS -->
-    
-    
-    
-    
-    <script src="01.js"></script>
+    </div> -->
+</div>
+<!-- End Vue JS -->
+
+
+<script src="01.js"></script>
 </body>
 </html>
