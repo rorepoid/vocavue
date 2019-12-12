@@ -35,82 +35,146 @@
             <button class="w-full h-12">Artistas</button>
         </div>
 
-        <div class="flex flex-wrap w-full px-1 pb-1 overflow-y-scroll">
-            <div class="sticky top-0 w-full flex flex-col">
+        <div class="flex flex-wrap w-full px-1 pb-1 overflow-y-scroll ">
+            <div class="sticky top-0 w-full h-16 flex flex-col">
                 <div id="searcher" class="flex bg-gray-800 h-16 rounded-lg rounded-t-none p-4">
                     <input type="text" name="search" id="search" placeholder="Search" class="w-3/4 rounded-full">
                 </div>
                 <button @click="darkTheme = !darkTheme" :class="['absolute', 'right-0', 'text-white']">Dark Theme
                 </button>
             </div>
-            <div class="w-auto bg-gray-700 border-blue-900 rounded-lg  top-auto w-full">
+            <div class="w-auto bg-green-700 border-blue-900 rounded-lg h-full top-auto w-full container">
                 <div class="h-64 bg-black m-3 rounded-lg text-white text-center">
                     Eventos
                 </div>
-                <div class="flex flex-wrap items-stretch container mx-auto">
-                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg text-white text-center">
+                <div class="flex flex-wrap items-stretch  mx-auto bg-gray-700">
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg m-4 text-white text-center">
                         <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
                             <img class="rounded-lg w-full h-full"
                                  src="https://nicovideo.cdn.nimg.jp/thumbnails/36060272/36060272.17133200.L" alt=""
                                  data-reactid="37">
                         </div>
-                        SpicA
+                        Nico Nico Douga
                     </div>
-                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg text-white text-center">
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg m-4 text-white text-center">
                         <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
                             <img class="rounded-lg w-full h-full"
-                                 src="https://i0.hdslb.com/bfs/archive/fd0c6f308855646afe2ed10d9b7196162c8d908c.jpg" alt=""
+                                 src="http://nicovideo.cdn.nimg.jp/thumbnails/9714351/9714351" alt=""
                                  data-reactid="37">
                         </div>
-                        ODDS & ENDS
+                        Rolling Girl
                     </div>
-                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg text-white text-center">
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg m-4 text-white text-center">
                         <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
                             <img class="rounded-lg w-full h-full"
-                                 src="https://i2.hdslb.com/bfs/archive/8f939a5008e8e37ab8ee1d2d01d8002bf3d3812a.jpg" alt=""
+                                 src="http://tn-skr2.smilevideo.jp/smile?i=8089993" alt=""
                                  data-reactid="37">
                         </div>
-                        Dream Fever
+                        Meltdown
                     </div>
-                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg text-white text-center">
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg m-4 text-white text-center">
                         <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
                             <img class="rounded-lg w-full h-full"
-                                 src="https://i1.hdslb.com/bfs/archive/dfda70903d963cabc370bc1610af66791dc7501b.jpg" alt=""
+                                 src="https://i.ytimg.com/vi/PqJNc9KVIZE/default.jpg" alt=""
                                  data-reactid="37">
                         </div>
-                        Secret Police
+                        Tell your world
                     </div>
-                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg text-white text-center">
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg m-4 text-white text-center">
                         <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
                             <img class="rounded-lg w-full h-full"
-                                 src="https://i0.hdslb.com/bfs/archive/ed69916ada4bbb190e29cbb1086f5c42bc47b3f4.jpg" alt=""
+                                 src="http://tn-skr3.smilevideo.jp/smile?i=15630734" alt=""
                                  data-reactid="37">
                         </div>
-                        Dream Fever
+                        Senbonzakura
                     </div>
-                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg text-white text-center">
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg m-4 text-white text-center">
                         <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
                             <img class="rounded-lg w-full h-full"
-                                 src="https://i2.hdslb.com/bfs/archive/1b7f32d8c7ec961cca63e476241bf7c1cd004cd1.jpg" alt=""
+                                 src="http://tn-skr3.smilevideo.jp/smile?i=20244918" alt=""
                                  data-reactid="37">
                         </div>
-                        Secret Police
+                        The lost one's weeping
                     </div>
-                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg text-white text-center">
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg m-4 text-white text-center">
+                        <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
+                            <img class="rounded-lg w-full h-full"
+                                 src="https://i.ytimg.com/vi/6OmwKZ9r07o/default.jpg" alt=""
+                                 data-reactid="37">
+                        </div>
+                        ODDS&ENDS
+                    </div>
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg m-4 text-white text-center">
+                        <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
+                            <img class="rounded-lg w-full h-full"
+                                 src="https://i.ytimg.com/vi/HOz-9FzIDf0/default.jpg" alt=""
+                                 data-reactid="37">
+                        </div>
+                        Matryoshka
+                    </div>
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg m-4 text-white text-center">
                         <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
                             <img class="rounded-lg w-full h-full"
                                  src="https://nicovideo.cdn.nimg.jp/thumbnails/36060272/36060272.17133200.L" alt=""
                                  data-reactid="37">
                         </div>
-                        Dream Fever
+                        Nico Nico Douga
                     </div>
-                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg text-white text-center">
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg m-4 text-white text-center">
                         <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
                             <img class="rounded-lg w-full h-full"
-                                 src="https://nicovideo.cdn.nimg.jp/thumbnails/36060272/36060272.17133200.L" alt=""
+                                 src="http://nicovideo.cdn.nimg.jp/thumbnails/9714351/9714351" alt=""
                                  data-reactid="37">
                         </div>
-                        Secret Police
+                        Rolling Girl
+                    </div>
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg m-4 text-white text-center">
+                        <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
+                            <img class="rounded-lg w-full h-full"
+                                 src="http://tn-skr2.smilevideo.jp/smile?i=8089993" alt=""
+                                 data-reactid="37">
+                        </div>
+                        Meltdown
+                    </div>
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg m-4 text-white text-center">
+                        <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
+                            <img class="rounded-lg w-full h-full"
+                                 src="https://i.ytimg.com/vi/PqJNc9KVIZE/default.jpg" alt=""
+                                 data-reactid="37">
+                        </div>
+                        Tell your world
+                    </div>
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg m-4 text-white text-center">
+                        <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
+                            <img class="rounded-lg w-full h-full"
+                                 src="http://tn-skr3.smilevideo.jp/smile?i=15630734" alt=""
+                                 data-reactid="37">
+                        </div>
+                        Senbonzakura
+                    </div>
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg m-4 text-white text-center">
+                        <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
+                            <img class="rounded-lg w-full h-full"
+                                 src="http://tn-skr3.smilevideo.jp/smile?i=20244918" alt=""
+                                 data-reactid="37">
+                        </div>
+                        The lost one's weeping
+                    </div>
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg m-4 text-white text-center">
+                        <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
+                            <img class="rounded-lg w-full h-full"
+                                 src="https://i.ytimg.com/vi/6OmwKZ9r07o/default.jpg" alt=""
+                                 data-reactid="37">
+                        </div>
+                        ODDS&ENDS
+                    </div>
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 bg-black h-64 rounded-lg m-4 text-white text-center">
+                        <div class="bg-gray-600 rounded-lg border-yellow-900 h-56">
+                            <img class="rounded-lg w-full h-full"
+                                 src="https://i.ytimg.com/vi/HOz-9FzIDf0/default.jpg" alt=""
+                                 data-reactid="37">
+                        </div>
+                        Matryoshka
                     </div>
                 </div>
             </div>
