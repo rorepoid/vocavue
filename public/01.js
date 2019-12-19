@@ -42,17 +42,17 @@ const app = new Vue({
 
 
 async function getData(){
-var url = 'https://vocadb.net/api/songs/top-rated?maxResults=30';
-let response = await fetch(url);
+    var url = 'https://vocadb.net/api/songs/top-rated?maxResults=30';
+    let response = await fetch(url);
 
-if (response.ok) { // if HTTP-status is 200-299
-  // get the response body (the method explained below)
-  let json = await response.json();
-  console.log(json);
+    if (response.ok) { // if HTTP-status is 200-299
+                       // get the response body (the method explained below)
+        let json = await response.json();
+        console.log(json);
 //   alert(response.status);
-} else {
-  alert("HTTP-Error: " + response.status);
-}
+    } else {
+        alert("HTTP-Error: " + response.status);
+    }
 }
 
 getData();
