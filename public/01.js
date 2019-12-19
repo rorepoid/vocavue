@@ -42,7 +42,7 @@ const app = new Vue({
 
 
 async function getData(){
-var url = 'https://vocadb.net/api/songs/top-rated?maxResults=5';
+var url = 'https://vocadb.net/api/songs/top-rated?maxResults=30';
 let response = await fetch(url);
 
 if (response.ok) { // if HTTP-status is 200-299
