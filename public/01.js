@@ -18,7 +18,13 @@ vocaImage = Vue.component("voca-image", {
             </div>
         </div>
     `,
-
+    data() {
+        return {info: null};
+    },
+    mounted () {
+        axios.get('https://vocadb.net/api/songs/top-rated?maxResults=50&fields=PVs')
+            .then(response => (this.info = response.data))
+    }
 })
 
 
