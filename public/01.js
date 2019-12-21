@@ -1,3 +1,27 @@
+
+vocaImage = Vue.component("voca-image", {
+    props: {
+        src: null
+    },
+    template: `
+        <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 h-auto rounded-lg text-white text-center">
+            <div class="mx-0 sm:mx-1 md:mx-4">
+                <div class="bg-gray-600 rounded-lg h-56">
+                    <img class="rounded-lg w-full h-full"
+                         src="https://nicovideo.cdn.nimg.jp/thumbnails/36060272/36060272.17133200.L" 
+                         data-reactid="37">
+                </div>
+                <div class="text-left h-16">
+                    <p class="">Nico Nico Douga</p>
+                    <sub>asas</sub>
+                </div>
+            </div>
+        </div>
+    `,
+
+})
+
+
 const app = new Vue({
     el: '#app',
     data: {
@@ -25,6 +49,9 @@ const app = new Vue({
             this.total = this.frutas.reduce((contador, array) => contador + array.cantidad, 0)
             return this.total
         },
+    },
+    components: {
+        vocaImage: vocaImage
     }
 
 })
@@ -33,32 +60,18 @@ const app = new Vue({
 
 
 
-
-
-
-
-
-
-
-
-async function getData(){
+async function getData() {
     var url = 'https://vocadb.net/api/songs/top-rated?maxResults=50&fields=PVs';
     let response = await fetch(url);
-
-    if (response.ok) { // if HTTP-status is 200-299
-                       // get the response body (the method explained below)
+    if (response.ok) {
         let json = await response.json();
         console.log(json);
-//   alert(response.status);
     } else {
         alert("HTTP-Error: " + response.status);
     }
 }
 
-getData();
-
-
-
+// getData();
 
 
 // console.log('asas');
