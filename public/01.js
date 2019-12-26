@@ -1,25 +1,25 @@
 
-vocaImage = Vue.component("voca-image", {
-    props: ['src'],
-    template: `
-        <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 h-auto rounded-lg text-white text-center">
-            <div class="mx-0 sm:mx-1 md:mx-4">
-                <div class="bg-gray-600 rounded-lg h-56">
-                    <img class="rounded-lg w-full h-full"
-                         src="https://nicovideo.cdn.nimg.jp/thumbnails/36060272/36060272.17133200.L" 
-                         data-reactid="37">
-                </div>
-                <div class="text-left h-16">
-                    <p class="">Nico Nico Douga</p>
-                    <sub>asas</sub>
-                </div>
-            </div>
-        </div>
-    `,
-    data() {
-        return {info: null};
-    },
-})
+// vocaImage = Vue.component("voca-image", {
+//     props: ['src'],
+//     template: `
+//         <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 h-auto rounded-lg text-white text-center">
+//             <div class="mx-0 sm:mx-1 md:mx-4">
+//                 <div class="bg-gray-600 rounded-lg h-56">
+//                     <img class="rounded-lg w-full h-full"
+//                          src="https://nicovideo.cdn.nimg.jp/thumbnails/36060272/36060272.17133200.L" 
+//                          data-reactid="37">
+//                 </div>
+//                 <div class="text-left h-16">
+//                     <p class="">Nico Nico Douga</p>
+//                     <sub>asas</sub>
+//                 </div>
+//             </div>
+//         </div>
+//     `,
+//     data() {
+//         return {info: null};
+//     },
+// })
 
 
 const app = new Vue({
@@ -55,10 +55,6 @@ const app = new Vue({
     axios.get('https://vocadb.net/api/songs/top-rated?maxResults=50&fields=PVs')
         .then(response => (this.songs = response.data))
     },
-    components: {
-        vocaImage: vocaImage
-    }
-
 })
 
 async function getData() {
@@ -66,10 +62,10 @@ async function getData() {
     let response = await fetch(url);
     if (response.ok) {
         let json = await response.json();
-        console.log(json);
+        console.log(json[0].pvs[0].thumbUrl);
     } else {
         alert("HTTP-Error: " + response.status);
     }
 }
 
-// getData();
+getData();
