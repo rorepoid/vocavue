@@ -1,8 +1,6 @@
 
 vocaImage = Vue.component("voca-image", {
-    props: {
-        src: null
-    },
+    props: ['src'],
     template: `
         <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 h-auto rounded-lg text-white text-center">
             <div class="mx-0 sm:mx-1 md:mx-4">
@@ -21,16 +19,13 @@ vocaImage = Vue.component("voca-image", {
     data() {
         return {info: null};
     },
-    mounted () {
-        axios.get('https://vocadb.net/api/songs/top-rated?maxResults=50&fields=PVs')
-            .then(response => (this.info = response.data))
-    }
 })
 
 
 const app = new Vue({
     el: '#app',
     data: {
+        songs: {},
         titulo: 'VocaDB',
         frutas: [
             {nombre: 'Pera', cantidad: 10},
@@ -56,15 +51,15 @@ const app = new Vue({
             return this.total
         },
     },
+    mounted () {
+    axios.get('https://vocadb.net/api/songs/top-rated?maxResults=50&fields=PVs')
+        .then(response => (this.songs = response.data))
+    },
     components: {
         vocaImage: vocaImage
     }
 
 })
-
-
-
-
 
 async function getData() {
     var url = 'https://vocadb.net/api/songs/top-rated?maxResults=50&fields=PVs';
@@ -78,6 +73,3 @@ async function getData() {
 }
 
 // getData();
-
-
-// console.log('asas');

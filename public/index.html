@@ -49,7 +49,9 @@
                             Eventos
                         </div>
                         <div class="flex flex-wrap items-stretch  mx-auto bg-gray-700 justify-center">
-                            <voca-image></voca-image>
+                            <div v-for="song of songs">
+                                <voca-image></voca-image>                                
+                            </div>
                             <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 h-auto rounded-lg text-white text-center">
                                 <div class="mx-0 sm:mx-1 md:mx-4">
                                     <div class="bg-gray-600 rounded-lg h-56">
