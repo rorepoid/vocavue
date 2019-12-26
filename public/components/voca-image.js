@@ -3,9 +3,13 @@ Vue.component("voca-image", {
     template: `
             <div class="mx-0 sm:mx-1 md:mx-4">
                 <div class="bg-gray-600 rounded-lg h-56">
-                    <img class="rounded-lg w-full h-full"
-                         :src="src.pvs[0].thumbUrl" 
-                         data-reactid="37">
+                    <a :href="src.pvs[0].url"
+                    	target="_blank">
+	                    <img class="rounded-lg w-full h-full"
+	                         :src="src.pvs[0].thumbUrl" 
+	                         data-reactid="37"
+	                         onerror="this.src='img/aimaina.png'">
+                     </a>
                 </div>
                 <div class="text-left h-16">
                     <p class="">Nico Nico Douga</p>
