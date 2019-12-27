@@ -12,8 +12,8 @@ Vue.component("voca-image", {
                      </a>
                 </div>
                 <div class="text-left h-16">
-                    <p class="">Nico Nico Douga</p>
-                    <sub>asas</sub>
+                    <h1 class="">{{src.name}}</h1>
+                    <p>{{src.pvs[1].author}}</p>
                 </div>
             </div>
     `,
