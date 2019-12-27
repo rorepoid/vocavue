@@ -33,16 +33,3 @@ const app = new Vue({
         .then(response => (this.songs = response.data))
     },
 })
-
-async function getData() {
-    var url = 'https://vocadb.net/api/songs/top-rated?maxResults=50&fields=PVs';
-    let response = await fetch(url);
-    if (response.ok) {
-        let json = await response.json();
-        console.log(json[0].pvs[0].thumbUrl);
-    } else {
-        alert("HTTP-Error: " + response.status);
-    }
-}
-
-getData();
