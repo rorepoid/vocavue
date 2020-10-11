@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@nuxtjs/tailwindcss": "^3.1.0",
+    "axios": "^0.20.0",
     "nuxt": "^2.14.6"
   }
 }
