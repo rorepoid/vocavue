@@ -1,17 +1,20 @@
 {
-  "name": "Tailwind",
+  "name": "vocavue",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "postcss css/tailwind.css -o public/build/tailwind.css"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "start": "nuxt start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "autoprefixer": "^9.6.5",
-    "postcss-cli": "^7.1.0",
-    "tailwindcss": "^1.1.2"
+    "@nuxtjs/tailwindcss": "^3.1.0",
+    "axios": "^0.20.0",
+    "nuxt": "^2.14.6"
   }
 }
