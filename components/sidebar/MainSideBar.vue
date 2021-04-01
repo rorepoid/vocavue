@@ -12,10 +12,42 @@
                 </a>
             </div>
         </div>
-        <button class="w-full h-12">Inicio</button>
-        <button class="w-full h-12">Novedades</button>
-        <button class="w-full h-12">Favoritos</button>
-        <button class="w-full h-12">Suscripciones</button>
-        <button class="w-full h-12">Artistas</button>
+        <div v-for="option of options" :key="option">
+            <side-bar-button :option="option"></side-bar-button>
+        </div>
     </div>
 </template>
+
+<script>
+import SideBarButton from './SideBarButton.vue'
+
+export default {
+  components: { SideBarButton },
+    data() {
+        return {
+            options: [
+                {
+                    text: "Inicio",
+                    link: "#Inicio",
+                },
+                {
+                    text: "Novedades",
+                    link: "#Novedades",
+                },
+                {
+                    text: "Favoritos",
+                    link: "#Favoritos",
+                },
+                {
+                    text: "Suscripciones",
+                    link: "#Suscripciones",
+                },
+                {
+                    text: "Artistas",
+                    link: "#Artistas",
+                },
+            ]
+        }
+    }
+}
+</script>
