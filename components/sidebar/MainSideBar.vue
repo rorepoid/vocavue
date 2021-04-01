@@ -12,7 +12,7 @@
                 </a>
             </div>
         </div>
-        <div v-for="option of options" :key="option">
+        <div v-for="(option, index) of options" :key="index">
             <side-bar-button :option="option"></side-bar-button>
         </div>
     </div>
