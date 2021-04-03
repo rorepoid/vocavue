@@ -1,18 +1,25 @@
 <template lang="html">
-    <div class="w-auto bg-gray-700 flex-1 border-blue-900 rounded-lg h-full top-auto w-full container">
-        <events></events>
-        <div class="flex flex-wrap items-stretch  mx-auto bg-gray-700 justify-center">
-            <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 h-auto rounded-lg text-white text-center" v-for="song of songs">
-                <voca-image :song="song"></voca-image>
+    <HomeMain class="pt-16">
+        <MainSideBar class="w-64 h-full text-white bg-gray-700 rounded hidden sm:hidden md:block lg:block fixed" />
+        <div class="flex-1 pl-0 md:pl-64">
+            <div>
+                <events></events>
+                <div class="flex flex-wrap items-stretch  mx-auto bg-gray-700 justify-center">
+                    <div class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 h-auto rounded-lg text-white text-center" v-for="song of songs">
+                        <voca-image :song="song"></voca-image>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </HomeMain>
 </template>
 
 <script>
 const axios = require('axios');
 import VocaImage from "../components/home/vocaimage";
 import Events from "../components/home/events";
+import MainSideBar from "~/components/sidebar/MainSideBar";
+import HomeMain from "../components/home/HomeMain";
 
 export default {
     data() {
@@ -35,6 +42,8 @@ export default {
     components: {
         VocaImage,
         Events,
+        MainSideBar,
+        HomeMain,
     }
 }
 </script>
