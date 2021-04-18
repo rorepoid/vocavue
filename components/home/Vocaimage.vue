@@ -4,9 +4,9 @@
             <a :href="href"
                 target="_blank">
                 <img class="rounded-lg w-full h-full"
-                        :src="src"
+                        :src="src || require(`~/assets/aimaina.png`)"
                         data-reactid="37"
-                        onerror="this.src='img/aimaina.png'">
+                >
                 </a>
         </div>
         <div class="text-left h-16">
