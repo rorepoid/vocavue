@@ -4,20 +4,20 @@
 
 <script>
 export default {
-    props: ['option']
-}
+  props: ["option"],
+};
 </script>
 
 <style scoped>
-    a {
-        max-height: 3rem;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1em 1em;
-        text-align: center;
-        text-overflow: ellipsis;
-        overflow: hidden;
-    }
+a {
+  max-height: 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 1em;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 </style>
