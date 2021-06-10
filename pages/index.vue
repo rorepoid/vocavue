@@ -1,7 +1,7 @@
 <template lang="html">
-    <HomeMain class="pt-16">
-        <MainSideBar class="w-64 h-full text-white bg-gray-700 rounded hidden sm:hidden md:block lg:block fixed" />
-        <div class="flex-1 pl-0 md:pl-64">
+    <HomeMain>
+        <MainSideBar class="h-full text-white bg-gray-700 hidden sm:hidden md:block lg:block rounded main-side" />
+        <div class="content">
             <div>
                 <events></events>
                 <div class="flex flex-wrap items-stretch  mx-auto bg-gray-700 justify-center">
@@ -47,3 +47,15 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.main-side {
+    width: 16em;
+    position: sticky;
+    top: 4rem;
+}
+
+.content {
+    width: 50.6em;
+}
+</style>

@@ -9,9 +9,9 @@
       'justify-center',
     ]"
   >
-    <div class="container bg-gray-600 flex flex-row">
+    <div class="container bg-gray-600">
       <div
-        class="w-full h-16 flex top-0 bg-gray-800 border-blue-900 container fixed"
+        class="w-full h-16 flex top-0 bg-gray-800 border-blue-900 container sticky"
       >
         <logo-box class="sticky top-0 bottom-auto w-64 pb-1" />
         <div class="sticky top-0 w-full h-16 flex flex-col">
