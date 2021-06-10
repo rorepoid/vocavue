@@ -10,9 +10,14 @@ export default {
 
 <style scoped>
     a {
-        height: 3rem;
+        max-height: 3rem;
         width: 100%;
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1em 1em;
         text-align: center;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 </style>
