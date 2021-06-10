@@ -16,8 +16,8 @@
 
 <script>
 const axios = require('axios');
-import VocaImage from "../components/home/vocaimage";
-import Events from "../components/home/events";
+import VocaImage from "../components/home/Vocaimage";
+import Events from "../components/home/Events";
 import MainSideBar from "~/components/sidebar/MainSideBar";
 import HomeMain from "../components/home/HomeMain";
 
