@@ -10,29 +10,14 @@
     ]"
   >
     <div class="container bg-gray-600">
-      <div
-        class="w-full h-16 flex top-0 bg-gray-800 border-blue-900 container sticky"
-      >
-        <logo-box class="sticky top-0 bottom-auto w-64 pb-1" />
-        <div class="sticky top-0 w-full h-16 flex flex-col">
-          <search-box class="justify-center" />
-          <button
-            @click="darkTheme = !darkTheme"
-            :class="['absolute', 'right-0', 'text-white']"
-          >
-            Dark Theme
-          </button>
-        </div>
-      </div>
+      <Header />
       <Nuxt />
     </div>
   </div>
 </template>
 
 <script>
-import LogoBox from "../components/navbar/LogoBox";
-import MainSideBar from "~/components/sidebar/MainSideBar";
-import SearchBox from "../components/navbar/SearchBox";
+import SideBar from "~/components/sidebar/SideBar";
 
 export default {
   data() {
@@ -42,9 +27,7 @@ export default {
     };
   },
   components: {
-    MainSideBar,
-    SearchBox,
-    LogoBox,
+    SideBar,
   },
 };
 </script>
