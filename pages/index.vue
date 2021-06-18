@@ -9,12 +9,11 @@
         <div>
           <events></events>
           <div class="song-list">
-            <div
-              class="rounded-lg text-white text-center song-card"
+            <voca-image
               v-for="song of songs"
-            >
-              <voca-image :song="song" class=""></voca-image>
-            </div>
+              :key="song.id"
+              :song="song"
+            ></voca-image>
           </div>
         </div>
       </div>
