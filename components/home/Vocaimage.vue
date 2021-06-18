@@ -1,6 +1,6 @@
 <template>
     <div class="mx-0 sm:mx-1 md:mx-4">
-        <div class="bg-gray-600 rounded-lg h-56">
+        <div class="bg-gray-600 rounded-lg">
             <a :href="href"
                 target="_blank">
                 <img class="rounded-lg w-full h-full"

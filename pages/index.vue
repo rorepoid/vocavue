@@ -8,14 +8,12 @@
       <div class="content">
         <div>
           <events></events>
-          <div
-            class="flex flex-wrap items-stretch  mx-auto bg-gray-700 justify-center"
-          >
+          <div class="song-list">
             <div
-              class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 h-auto rounded-lg text-white text-center"
+              class="rounded-lg text-white text-center song-card"
               v-for="song of songs"
             >
-              <voca-image :song="song"></voca-image>
+              <voca-image :song="song" class=""></voca-image>
             </div>
           </div>
         </div>
@@ -75,5 +73,11 @@ main {
 
 .content {
   width: 50.6em;
+}
+
+.song-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  gap: 1em;
 }
 </style>
