@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="container">
+  <div>
     <Header />
     <main>
       <SideBar
@@ -8,15 +8,12 @@
       <div class="content">
         <div>
           <events></events>
-          <div
-            class="flex flex-wrap items-stretch  mx-auto bg-gray-700 justify-center"
-          >
-            <div
-              class="flex-grow w-64 max-w-sm md:w-1/2 lg:w-1/3 h-auto rounded-lg text-white text-center"
+          <div class="song-list">
+            <voca-image
               v-for="song of songs"
-            >
-              <voca-image :song="song"></voca-image>
-            </div>
+              :key="song.id"
+              :song="song"
+            ></voca-image>
           </div>
         </div>
       </div>
@@ -65,6 +62,7 @@ export default {
 main {
   display: flex;
   background-color: #4a5568;
+  justify-content: center;
 }
 
 .main-side {
@@ -75,5 +73,11 @@ main {
 
 .content {
   width: 50.6em;
+}
+
+.song-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: 1em;
 }
 </style>
