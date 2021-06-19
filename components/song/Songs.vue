@@ -1,5 +1,6 @@
 <template>
   <section class="songs">
+    <h2>Top songs of all time</h2>
     <div class="songs-collection">
       <VocaImage v-for="song in songs" :key="song.id" :song="song" />
     </div>
@@ -40,5 +41,10 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
   gap: 1em;
+}
+
+h2 {
+  color: #ffffff;
+  padding: 1em 0;
 }
 </style>
