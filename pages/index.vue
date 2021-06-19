@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="container">
+  <div>
     <Header />
     <main>
       <SideBar
@@ -62,6 +62,7 @@ export default {
 main {
   display: flex;
   background-color: #4a5568;
+  justify-content: center;
 }
 
 .main-side {
