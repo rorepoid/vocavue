@@ -2,11 +2,9 @@
   <div>
     <Header />
     <main>
-      <SideBar
-        class="h-full text-white bg-gray-700 hidden sm:hidden md:block lg:block rounded main-side"
-      />
+      <SideBar class="main-side" />
       <div class="content">
-        <events></events>
+        <Events />
         <Songs />
       </div>
     </main>
@@ -16,7 +14,6 @@
 <script>
 import Events from "../components/home/Events";
 import SideBar from "~/components/sidebar/SideBar";
-import HomeMain from "../components/home/HomeMain";
 import Header from "../components/Header";
 import Songs from "~/components/song/Songs";
 
@@ -24,7 +21,6 @@ export default {
   components: {
     Events,
     SideBar,
-    HomeMain,
     Header,
     Songs,
   },
@@ -40,8 +36,10 @@ main {
 
 .main-side {
   width: 16em;
+  height: 100%;
   position: sticky;
-  top: 4rem;
+  top: 5rem;
+  color: #ffffff;
 }
 
 .content {
