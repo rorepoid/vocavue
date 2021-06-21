@@ -1,7 +1,14 @@
 :root {
-    --max-width:65rem;
+  --ff-default: "IBM Plex Sans", sans-serif;
+  --max-width: 65rem;
 }
 
 html {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
+  font-family: var(--ff-default);
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
