@@ -7,19 +7,22 @@
       <button class="burger">
         <Burger />
       </button>
-      <SearchBox class="search" />
+      <input
+        type="text"
+        name="search"
+        placeholder="Search"
+        class="search"
+      />
     </nav>
   </header>
 </template>
 
 <script>
 import Burger from "~/assets/images/burger.svg";
-import SearchBox from "../components/navbar/SearchBox";
 
 export default {
   components: {
     Burger,
-    SearchBox,
   },
 };
 </script>
@@ -37,12 +40,17 @@ export default {
   padding: 1rem;
   display: flex;
   max-width: var(--max-width);
+  align-items: center;
 }
 
 a {
   max-width: 3rem;
   max-height: 3rem;
   display: flex;
+}
+
+img {
+  width: 100%;
 }
 
 .nav-logo {
@@ -63,6 +71,16 @@ a {
   width: 75%;
   display: none;
   margin: 0 0 0 auto;
+  height: 2rem;
+  border-radius: 9999px;
+}
+
+::-webkit-input-placeholder {
+  font-size: 1rem;
+}
+
+::-moz-placeholder {
+  font-size: 1rem;
 }
 
 @media (min-width: 50rem) {
