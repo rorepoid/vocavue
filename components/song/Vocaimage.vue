@@ -1,16 +1,10 @@
 <template>
-  <article class="mx-0 rounded-lg text-white text-center song-card">
+  <article class="song-card">
     <a :href="href" target="_blank">
-      <img
-        class="rounded-lg w-full"
-        :src="src || require(`~/assets/aimaina.png`)"
-        data-reactid="37"
-      />
+      <img :src="src" @error="setAltImg" />
     </a>
-    <div class="text-left h-16">
-      <h1 class="">{{ song.name }}</h1>
-      <p>{{ author }}</p>
-    </div>
+    <h3>{{ song.name }}</h3>
+    <p>{{ author }}</p>
   </article>
 </template>
 
@@ -36,12 +30,22 @@ export default {
       }
     });
   },
+
+  methods: {
+    setAltImg: event => event.target.src = require("~/assets/aimaina.png"),
+  },
 };
 </script>
 
 <style scoped>
 img {
+  width: 100%;
   aspect-ratio: 12/9;
   object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+.song-card {
+  color: #ffffff;
 }
 </style>
