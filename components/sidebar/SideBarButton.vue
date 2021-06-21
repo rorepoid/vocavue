@@ -19,5 +19,7 @@ a {
   text-align: center;
   text-overflow: ellipsis;
   overflow: hidden;
+  text-decoration: none;
+  color: #ffffff;
 }
 </style>
