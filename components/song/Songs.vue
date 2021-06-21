@@ -1,6 +1,6 @@
 <template>
   <section class="songs">
-    <h2>Top songs of all time</h2>
+    <h2 class="songs-title">Top songs of all time</h2>
     <div class="songs-collection">
       <VocaImage v-for="song in songs" :key="song.id" :song="song" />
     </div>
@@ -32,7 +32,7 @@ export default {
 
   components: {
     VocaImage,
-  }
+  },
 };
 </script>
 
@@ -43,7 +43,7 @@ export default {
   gap: 1em;
 }
 
-h2 {
+.songs-title {
   color: #ffffff;
   padding: 1em 0;
 }
