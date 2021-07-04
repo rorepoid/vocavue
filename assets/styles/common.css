@@ -1,6 +1,12 @@
 :root {
   --ff-default: "IBM Plex Sans", sans-serif;
   --max-width: 65rem;
+  /* --background-color: #4a5568; */
+  --color-first: #177e89;
+  --color-second: #084c61;
+  --color-third: #db3a34;
+  --color-fourth: #ffc857;
+  --color-fifth: #323031;
 }
 
 html {
