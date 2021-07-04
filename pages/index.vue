@@ -35,14 +35,21 @@ main {
 }
 
 .main-side {
-  width: 16em;
-  height: 100%;
-  position: sticky;
-  top: 5rem;
-  color: #ffffff;
+  display: none;
 }
 
 .content {
   width: 50.6em;
+}
+
+@media (min-width: 50rem) {
+  .main-side {
+    display: block;
+    width: 16em;
+    height: 100%;
+    position: sticky;
+    top: 5rem;
+    color: #ffffff;
+  }
 }
 </style>
