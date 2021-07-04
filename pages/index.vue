@@ -30,7 +30,7 @@ export default {
 <style scoped>
 main {
   display: flex;
-  background-color: #4a5568;
+  background-color: var(--color-first);
   justify-content: center;
 }
 

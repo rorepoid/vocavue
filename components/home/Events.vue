@@ -7,7 +7,7 @@
 <style scoped>
 .events-container {
   height: 16rem;
-  background-color: #000000;
+  background-color: var(--color-fifth);
   margin: 3;
   border-radius: 0.5rem;
   color: #ffffff;

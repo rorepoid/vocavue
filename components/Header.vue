@@ -30,7 +30,7 @@ export default {
 <style scoped>
 .header {
   display: block;
-  background-color: #4a5568;
+  background-color: var(--color-first);
   position: sticky;
   top: 0;
 }
