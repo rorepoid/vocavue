@@ -15,24 +15,24 @@ export default {
     return {
       options: [
         {
-          text: "Inicio",
-          link: "#Inicio",
+          text: "Home",
+          link: "#Home",
         },
         {
-          text: "Novedades",
-          link: "#Novedades",
+          text: "News",
+          link: "#News",
         },
         {
-          text: "Favoritos",
-          link: "#Favoritos",
+          text: "Favorites",
+          link: "#Favorites",
         },
         {
-          text: "Suscripciones",
-          link: "#Suscripciones",
+          text: "Subscriptions",
+          link: "#Subscriptions",
         },
         {
-          text: "Artistas",
-          link: "#Artistas",
+          text: "Artists",
+          link: "#Artists",
         },
       ],
     };
