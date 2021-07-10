@@ -12,9 +12,9 @@
 </template>
 
 <script>
-import Events from "../components/home/Events";
+import Events from "~/components/home/Events";
 import SideBar from "~/components/sidebar/SideBar";
-import Header from "../components/Header";
+import Header from "~/components/Header";
 import Songs from "~/components/song/Songs";
 
 export default {
