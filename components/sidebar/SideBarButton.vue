@@ -21,4 +21,8 @@ a {
   text-decoration: none;
   color: #ffffff;
 }
+
+a:hover {
+  background-color: #7aa8ad;
+}
 </style>
