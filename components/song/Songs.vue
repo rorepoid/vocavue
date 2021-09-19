@@ -8,25 +8,24 @@
 </template>
 
 <script>
-const axios = require("axios");
+import songRepository from '../../src/SongFileRepository';
+// import songRepository from '../../src/SongVocadbRepository';
 import VocaImage from "~/components/song/Vocaimage";
 
 export default {
   data() {
     return {
-      songs: {},
+      songs: [],
     };
   },
 
   mounted() {
-    this.getSongs();
+    this.showSongs();
   },
 
   methods: {
-    getSongs() {
-      axios
-        .get("https://vocadb.net/api/songs/top-rated?maxResults=50&fields=PVs")
-        .then((response) => (this.songs = response.data));
+    async showSongs() {
+      this.songs = await songRepository.getSongs()
     },
   },
 
