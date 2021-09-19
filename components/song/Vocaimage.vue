@@ -14,19 +14,18 @@ export default {
 
   data() {
     return {
-      href: {},
-      src: {},
-      author: {},
+      href: '',
+      src: '',
+      author: '',
     };
   },
 
   mounted() {
     this.song.pvs.forEach((pv, index) => {
-      if (pv.pvType == "Original") {
+      if (pv.pvType === "Original") {
         this.href = pv.url;
         this.src = pv.thumbUrl;
         this.author = pv.author;
-        return;
       }
     });
   },
@@ -42,7 +41,7 @@ img {
   width: 100%;
   aspect-ratio: 12/9;
   object-fit: contain;
-  border-radius: 0.5rem;
+  background: var(--color-fifth);
 }
 
 .song-card {
