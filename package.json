@@ -16,7 +16,7 @@
     "@nuxtjs/tailwindcss": "^6.2.0",
     "axios": "^0.21.2",
     "modern-normalize": "^1.1.0",
-    "nuxt": "^3.0.0",
+    "nuxt": "^3.4.3",
     "nuxt-svg-loader": "^1.2.0"
   }
 }
