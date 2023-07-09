@@ -2,7 +2,7 @@
   <header class="header">
     <nav class="nav">
       <nuxt-link to="/">
-        <img class="nav-logo" src="~/assets/aimaina.png" alt="VocaDB Client" />
+        <img class="nav-logo" src="~/assets/images/logo.png" alt="VocaDB Client" />
       </nuxt-link>
       <button class="burger">
         <Burger />
