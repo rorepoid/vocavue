@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@nuxtjs/tailwindcss": "^4.2.1",
-    "axios": "^0.21.2",
+    "axios": "^0.28.0",
     "modern-normalize": "^1.1.0",
     "nuxt": "^2.17.0",
     "nuxt-svg-loader": "^1.2.0"
