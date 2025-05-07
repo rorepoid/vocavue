@@ -1,12 +1,10 @@
 <template lang="html">
-  <div>
-    <Header />
-    <main>
-      <SideBar class="main-side" />
-      <div class="content">
-        <Events />
-        <Songs />
-      </div>
+  <div class="app-layout">
+    <Header class="header" />
+    <SideBar class="main-side" />
+    <main class="content">
+      <Events />
+      <Songs />
     </main>
   </div>
 </template>
@@ -28,9 +26,18 @@ export default {
 </script>
 
 <style scoped>
+.app-layout {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main";
+  grid-template-columns: auto;
+  grid-template-rows: 80px auto;
+  background-color: var(--color-first);
+}
+
 main {
   display: flex;
-  background-color: var(--color-first);
   justify-content: center;
 }
 
@@ -39,7 +46,10 @@ main {
 }
 
 .content {
-  width: 50.6em;
+  /* width: 50.6em; */
+  display: grid;
+  grid-template-areas: "events", "songs";
+  grid-template-rows: 200px;
 }
 
 @media (min-width: 50rem) {
@@ -50,6 +60,10 @@ main {
     position: sticky;
     top: 5rem;
     color: #ffffff;
+  }
+
+  .app-layout {
+    padding: 0 10%;
   }
 }
 </style>

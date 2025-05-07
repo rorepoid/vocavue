@@ -1,18 +1,17 @@
 <template>
-  <header class="header">
+  <header>
     <nav class="nav">
       <nuxt-link to="/">
-        <img class="nav-logo" src="~/assets/images/logo.png" alt="VocaDB Client" />
+        <img
+          class="nav-logo"
+          src="~/assets/images/logo.png"
+          alt="VocaDB Client"
+        />
       </nuxt-link>
+      <input type="text" name="search" placeholder="Search" class="search" />
       <button class="burger">
         <Burger />
       </button>
-      <input
-        type="text"
-        name="search"
-        placeholder="Search"
-        class="search"
-      />
     </nav>
   </header>
 </template>
@@ -29,32 +28,23 @@ export default {
 
 <style scoped>
 .header {
-  display: block;
+  grid-area: header;
   background-color: var(--color-first);
   position: sticky;
   top: 0;
 }
 
 .nav {
-  margin: 0 auto;
-  padding: 1rem;
+  padding: 0 1rem;
   display: flex;
-  max-width: var(--max-width);
-  align-items: center;
-}
-
-a {
-  max-width: 3rem;
-  max-height: 3rem;
-  display: flex;
-}
-
-img {
   width: 100%;
+  height: 100%;
+  align-items: center;
 }
 
 .nav-logo {
   border-radius: 0.25rem;
+  width: 3rem;
 }
 
 .burger {
@@ -63,24 +53,26 @@ img {
   margin: 0 0 0 auto;
   color: #62d421;
   background: transparent;
-  border: none;
+  border-radius: 10px;
+  border-color: transparent;
+}
+
+.burger:hover,
+.burger:active {
+  background-color: #5aa6b0;
 }
 
 .search {
-  max-width: 50rem;
-  width: 75%;
-  display: none;
+  background-color: white;
+  width: 10rem;
   margin: 0 0 0 auto;
+  padding: 10px;
   height: 2rem;
-  border-radius: 9999px;
+  border-radius: 0.7rem;
 }
 
-::-webkit-input-placeholder {
-  font-size: 1rem;
-}
-
-::-moz-placeholder {
-  font-size: 1rem;
+.search::placeholder {
+  color: var(--color-first);
 }
 
 @media (min-width: 50rem) {
