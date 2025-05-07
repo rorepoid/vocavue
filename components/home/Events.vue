@@ -6,11 +6,18 @@
 
 <style scoped>
 .events-container {
-  height: 16rem;
+  height: 15rem;
+  width: 100%;
   background-color: var(--color-fifth);
   margin: 3;
   border-radius: 0.5rem;
   color: #ffffff;
   text-align: center;
+}
+
+@media (min-width: 50rem) {
+  .events-container {
+    height: 16rem;
+  }
 }
 </style>

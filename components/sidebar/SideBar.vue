@@ -1,7 +1,9 @@
 <template>
   <div>
-    <div v-for="(option, index) of options" :key="index">
-      <side-bar-button :option="option"></side-bar-button>
+    <div class="sidebar">
+      <div v-for="(option, index) of options" :key="index">
+        <side-bar-button :option="option"></side-bar-button>
+      </div>
     </div>
   </div>
 </template>
@@ -39,3 +41,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.sidebar {
+  position: sticky;
+  top: 80px;
+}
+</style>

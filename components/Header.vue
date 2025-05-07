@@ -1,18 +1,20 @@
 <template>
   <header>
-    <nav class="nav">
-      <nuxt-link to="/">
-        <img
-          class="nav-logo"
-          src="~/assets/images/logo.png"
-          alt="VocaDB Client"
-        />
-      </nuxt-link>
+    <nuxt-link to="/">
+      <img
+        class="nav-logo"
+        src="~/assets/images/logo.png"
+        alt="VocaDB Client"
+      />
+    </nuxt-link>
+    <div>
       <input type="text" name="search" placeholder="Search" class="search" />
-      <button class="burger">
-        <Burger />
-      </button>
-    </nav>
+      <nav class="nav">
+        <button class="burger">
+          <Burger />
+        </button>
+      </nav>
+    </div>
   </header>
 </template>
 
@@ -29,15 +31,25 @@ export default {
 <style scoped>
 .header {
   grid-area: header;
+  display: flex;
+  place-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0 1rem;
   background-color: var(--color-first);
   position: sticky;
   top: 0;
 }
 
-.nav {
-  padding: 0 1rem;
+.header > div {
   display: flex;
-  width: 100%;
+  place-items: center;
+  gap: 1rem;
+}
+
+.nav {
+  display: flex;
+  width: auto;
   height: 100%;
   align-items: center;
 }
@@ -50,7 +62,7 @@ export default {
 .burger {
   width: 2.5rem;
   height: 2.5rem;
-  margin: 0 0 0 auto;
+  margin: 0 auto;
   color: #62d421;
   background: transparent;
   border-radius: 10px;
@@ -59,12 +71,12 @@ export default {
 
 .burger:hover,
 .burger:active {
-  background-color: #5aa6b0;
+  background-color: #7aa8ad;
 }
 
 .search {
   background-color: white;
-  width: 10rem;
+  width: 100%;
   margin: 0 0 0 auto;
   padding: 10px;
   height: 2rem;
@@ -76,12 +88,22 @@ export default {
 }
 
 @media (min-width: 50rem) {
+  .header {
+    display: grid;
+    grid-template-columns: subgrid;
+    place-items: center;
+  }
+
   .burger {
     display: none;
   }
 
   .search {
-    display: flex;
+    width: 40rem;
+  }
+
+  .nav {
+    display: none;
   }
 }
 </style>

@@ -46,24 +46,29 @@ main {
 }
 
 .content {
-  /* width: 50.6em; */
   display: grid;
   grid-template-areas: "events", "songs";
-  grid-template-rows: 200px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15rem auto;
 }
 
 @media (min-width: 50rem) {
   .main-side {
     display: block;
-    width: 16em;
+    width: 100%;
     height: 100%;
-    position: sticky;
-    top: 5rem;
-    color: #ffffff;
   }
 
   .app-layout {
     padding: 0 10%;
+    grid-template-areas:
+      "header header"
+      "sidebar main";
+    grid-template-columns: 300px 1fr;
+  }
+
+  .content {
+    grid-template-rows: 16rem;
   }
 }
 </style>

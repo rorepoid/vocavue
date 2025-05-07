@@ -14,9 +14,9 @@ export default {
 
   data() {
     return {
-      href: '',
-      src: '',
-      author: '',
+      href: "",
+      src: "",
+      author: "",
     };
   },
 
@@ -31,7 +31,7 @@ export default {
   },
 
   methods: {
-    setAltImg: event => event.target.src = require("~/assets/aimaina.png"),
+    setAltImg: (event) => (event.target.src = require("~/assets/aimaina.png")),
   },
 };
 </script>

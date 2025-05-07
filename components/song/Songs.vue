@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import songRepository from '../../src/SongFileRepository';
+import songRepository from "../../src/SongFileRepository";
 // import songRepository from '../../src/SongVocadbRepository';
 import VocaImage from "~/components/song/Vocaimage";
 
@@ -25,7 +25,7 @@ export default {
 
   methods: {
     async showSongs() {
-      this.songs = await songRepository.getSongs()
+      this.songs = await songRepository.getSongs();
     },
   },
 
